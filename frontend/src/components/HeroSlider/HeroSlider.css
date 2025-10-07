@@ -1,0 +1,209 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -5px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.welcome-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  background-color: rgba(6, 138, 63, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-box h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* ... (keep all existing styles except the welcome text section) */
+
+.welcome-line {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.to-line {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0.3rem 0;
+}
+
+.brand-line {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+  font-weight: 500;
+}
+
+.login-info {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  font-size: 2.5rem; /* Increased from 2rem */
+  padding: 20px; /* Increased from 15px */
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  width: 70px; /* Increased from 50px */
+  height: 70px; /* Increased from 50px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.05); /* Added slight scale effect on hover */
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide.active {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Add these responsive styles to your existing HeroSlider.css */
+@media (max-width: 1200px) {
+  .welcome-line {
+    font-size: 2.5rem;
+  }
+  
+  .to-line {
+    font-size: 2rem;
+  }
+  
+  .brand-line {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-box {
+    width: 90%;
+    padding: 30px;
+  }
+  
+  .welcome-line {
+    font-size: 2rem;
+  }
+  
+  .to-line {
+    font-size: 1.7rem;
+  }
+  
+  .brand-line {
+    font-size: 2.5rem;
+  }
+  
+  .slider-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-box {
+    padding: 20px;
+  }
+  
+  .welcome-line {
+    font-size: 1.8rem;
+  }
+  
+  .to-line {
+    font-size: 1.5rem;
+    margin: 0.2rem 0;
+  }
+  
+  .brand-line {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .login-info {
+    font-size: 0.9rem;
+  }
+  
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+}
