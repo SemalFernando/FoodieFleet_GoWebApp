@@ -1,3 +1,5 @@
 .home-page {
-  padding-top: 80px; /* To account for fixed header */
+  padding-top: 0; /* Header is now transparent/glass morphism */
 }
+
+/* Additional home page styles will be added for other sections */

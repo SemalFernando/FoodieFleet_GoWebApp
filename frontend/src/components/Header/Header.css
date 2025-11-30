@@ -2,10 +2,12 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 0;
-  background-color: #068A3F;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
   z-index: 1000;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 107, 107, 0.1);
 }
 
 .header-container {
@@ -17,127 +19,104 @@
   margin: 0 auto;
 }
 
-/* Logo Scanning Animation - Enhanced Version */
+/* Enhanced Logo with Food Theme */
 .logo {
   position: relative;
-  display: inline-block;
-  font-size: 26px;
-  font-weight: 700;
-  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #2D3436;
   justify-self: start;
   overflow: hidden;
-  padding: 0 5px;
+  padding: 8px 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 142, 83, 0.1));
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
+}
+
+.logo-icon {
+  font-size: 32px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logo-text {
+  position: relative;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
 }
 
 .logo-scan {
   position: absolute;
   top: -5px;
-  /* Increased coverage */
   left: 0;
   width: 8px;
-  /* Thicker beam */
   height: calc(100% + 10px);
-  /* Taller coverage */
-  background: linear-gradient(to bottom,
-      transparent,
-      white,
-      /* Pure white for stronger effect */
-      transparent);
-  box-shadow: 0 0 15px white,
-    /* Stronger glow */
-    0 0 30px rgba(255, 255, 255, 0.6);
-  /* Additional glow layer */
+  background: linear-gradient(to bottom, transparent, #FF6B6B, transparent);
+  box-shadow: 0 0 15px #FF6B6B, 0 0 30px rgba(255, 107, 107, 0.6);
   animation: scan 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   z-index: 2;
   transform: translateX(-100%);
 }
 
-.logo-text {
-  position: relative;
-  display: inline-block;
-  animation: textReveal 1.5s ease-out forwards;
-  padding: 2px 0;
-  /* Better coverage */
-}
-
-/* Enhanced scan animation to cover full logo */
 @keyframes scan {
   0% {
     transform: translateX(-100%);
     opacity: 0;
   }
-
   10% {
     opacity: 1;
   }
-
   80% {
     opacity: 1;
   }
-
   100% {
     transform: translateX(calc(100% + 150px));
-    /* Extended beyond logo */
     opacity: 0;
   }
-}
-
-/* Smoother text reveal */
-@keyframes textReveal {
-  0% {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    opacity: 0.5;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    opacity: 1;
-  }
-}
-
-/* Add glow effect on hover */
-.logo:hover .logo-scan {
-  background: linear-gradient(to bottom,
-      transparent,
-      white,
-      transparent);
-  box-shadow: 0 0 20px white,
-    0 0 40px rgba(255, 255, 255, 0.8);
 }
 
 /* Navigation */
 .nav-center {
   display: flex;
-  gap: 50px;
+  gap: 40px;
   justify-self: center;
 }
 
 .nav-link {
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
+  color: #2D3436;
   position: relative;
-  padding-bottom: 5px;
+  padding: 8px 0;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
   font-family: inherit;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .nav-link:hover::after,
@@ -145,39 +124,83 @@
   width: 100%;
 }
 
-/* Login Button */
-.login-btn {
+.nav-link:hover,
+.nav-link.active {
+  color: #FF6B6B;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-self: end;
+}
+
+.cart-btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 18px;
-  background: linear-gradient(to right, #ffffff, #f0f0f0);
-  color: #222;
-  border-radius: 30px;
+  padding: 10px 20px;
+  background: rgba(255, 107, 107, 0.1);
+  border: 2px solid rgba(255, 107, 107, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-weight: 600;
+  color: #2D3436;
+}
+
+.cart-btn:hover {
+  background: rgba(255, 107, 107, 0.2);
+  transform: translateY(-2px);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #FF6B6B;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Order Now Button */
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  justify-self: end;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .login-btn:hover {
-  background: linear-gradient(to right, #f8f8f8, #e8e8e8);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #FF8E53, #FF6B6B);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
 }
 
 .login-btn:active {
-  transform: translateY(0);
-}
-
-.btn-icon {
-  display: flex;
-  align-items: center;
-  margin-top: 2px;
+  transform: translateY(-1px);
 }
 
 .btn-icon svg {
@@ -185,7 +208,7 @@
 }
 
 .login-btn:hover .btn-icon svg {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
 /* Responsive Styles */
@@ -194,49 +217,71 @@
     width: 95%;
     padding: 0 10px;
   }
-
+  
   .nav-center {
-    gap: 20px;
+    gap: 25px;
   }
 }
 
 @media (max-width: 768px) {
   .header-container {
     grid-template-columns: auto 1fr auto;
+    gap: 15px;
   }
-
+  
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 6px 12px;
   }
-
+  
+  .logo-icon {
+    font-size: 24px;
+  }
+  
+  .nav-center {
+    gap: 15px;
+  }
+  
   .nav-link {
     font-size: 0.9rem;
   }
-
+  
   .login-btn {
-    padding: 8px 15px;
+    padding: 10px 20px;
     font-size: 0.9rem;
+  }
+  
+  .cart-btn {
+    padding: 8px 15px;
   }
 }
 
 @media (max-width: 576px) {
   .header {
-    padding: 15px 0;
+    padding: 12px 0;
   }
-
+  
   .nav-center {
     gap: 10px;
   }
-
-  .login-btn {
-    padding: 6px 12px;
+  
+  .logo-text {
+    display: none;
   }
-
+  
   .login-btn .btn-text {
     display: none;
   }
-
-  .login-btn .btn-icon {
-    margin: 0;
+  
+  .login-btn {
+    padding: 10px;
+  }
+  
+  .cart-btn .cart-text {
+    display: none;
+  }
+  
+  .cart-btn {
+    padding: 10px;
   }
 }
