@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header';
-import { FaStar, FaFire, FaLeaf, FaSpicy } from 'react-icons/fa';
+import { FaStar, FaFire, FaLeaf } from 'react-icons/fa';
 import './Menu.css';
 
 function Menu() {
@@ -119,8 +119,8 @@ function Menu() {
     switch(tag) {
       case 'popular': return <FaFire className="tag-icon" />;
       case 'healthy': return <FaLeaf className="tag-icon" />;
-      case 'spicy': return <FaSpicy className="tag-icon" />;
-      case 'vegetarian': return <span>🌱</span>;
+      case 'spicy': return <span className="tag-icon">🌶️</span>;
+      case 'vegetarian': return <span className="tag-icon">🌱</span>;
       default: return null;
     }
   };
