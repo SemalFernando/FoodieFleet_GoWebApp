@@ -109,12 +109,12 @@ function About() {
                 <p className="member-role">Executive Chef</p>
                 <p className="member-bio">15 years of culinary experience with expertise in Italian cuisine</p>
                 <div className="social-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <button className="social-btn">
                     <FaLinkedin className="social-icon" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  </button>
+                  <button className="social-btn">
                     <FaGithub className="social-icon" />
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -128,12 +128,12 @@ function About() {
                 <p className="member-role">Pastry Chef</p>
                 <p className="member-bio">Award-winning pastry artist specializing in French desserts</p>
                 <div className="social-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <button className="social-btn">
                     <FaLinkedin className="social-icon" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  </button>
+                  <button className="social-btn">
                     <FaGithub className="social-icon" />
-                  </a>
+                  </button>
                 </div>
               </div>
 
@@ -147,12 +147,12 @@ function About() {
                 <p className="member-role">Head of Operations</p>
                 <p className="member-bio">Ensuring every meal meets our quality standards and delivery promises</p>
                 <div className="social-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <button className="social-btn">
                     <FaLinkedin className="social-icon" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  </button>
+                  <button className="social-btn">
                     <FaGithub className="social-icon" />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

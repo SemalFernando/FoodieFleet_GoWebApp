@@ -36,7 +36,7 @@
 /* Hero Section */
 .about-hero {
   background: linear-gradient(rgba(255, 107, 107, 0.8), rgba(255, 142, 83, 0.9)),
-              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
   background-size: cover;
   background-position: center;
   height: 70vh;
@@ -312,6 +312,24 @@
   line-height: 1.6;
 }
 
+/* Add to About.css - Social Button Styles */
+.social-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+  transform: scale(1.1);
+}
+
 /* Social Links */
 .social-links {
   display: flex;
@@ -337,12 +355,12 @@
     flex-direction: column;
     gap: 3rem;
   }
-  
+
   .mission-image {
     width: 100%;
     order: -1;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -352,21 +370,21 @@
   .hero-content h1 {
     font-size: 3rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.2rem;
   }
-  
+
   .mission-text h2,
   .values-section h2,
   .team-section h2 {
     font-size: 2.5rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
   }
@@ -378,21 +396,21 @@
     min-height: 400px;
     margin-bottom: 2rem;
   }
-  
+
   .hero-content h1 {
     font-size: 2.5rem;
   }
-  
+
   .mission-section,
   .values-section,
   .team-section {
     padding: 4rem 0;
   }
-  
+
   .mission-image {
     height: 300px;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr;
   }
