@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import Header from '../components/Header/Header';
+import Header from '../../components/Header/Header';
 import './About.css';
 
 function About() {

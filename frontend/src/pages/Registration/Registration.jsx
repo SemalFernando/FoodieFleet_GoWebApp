@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import styles from './Registration.module.css';
+import styles from './Registration.css';
 
 function Registration() {
   const [form, setForm] = useState({
