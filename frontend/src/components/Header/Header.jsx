@@ -7,8 +7,8 @@ function Header() {
         <header className="header">
             <div className="header-container">
                 <NavLink to="/" className="logo">
-                    <div className="logo-icon">🍕</div>
-                    <div className="logo-text">FreshBite</div>
+                    <div className="logo-icon">👨‍🍳</div>
+                    <div className="logo-text">FoodieFleet</div>
                     <div className="logo-scan"></div>
                 </NavLink>
                 <nav className="nav-center">
