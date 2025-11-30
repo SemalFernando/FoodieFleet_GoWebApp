@@ -41,7 +41,7 @@ function Header() {
                 <div className="header-actions">
                     <button className="cart-btn">
                         <span className="cart-icon">🛒</span>
-                        <span className="cart-count">0</span>
+                        <span className="cart-count">1</span>
                     </button>
                     <NavLink to="/login" className="login-btn">
                         <span className="btn-text">Order Now</span>
